@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南瓜图床-上传文件</title>
+    <link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css">
+    <style>
+        .upload {
+            width: 100%;
+            height: 500px;
+            border-radius: 7px;
+            box-shadow: 2px 2px 12px 2px #ccc;
+            margin-top: 80px;
+            display: block;
+        }
+
+        .upload-image {
+            width: 20%;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="index.php">南瓜图床</a>
+        <form class="form-inline" method="GET" action="index.php">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+            &nbsp
+            <a href="upload.html" class="btn btn-outline-primary"><img src="/assets/svg/upload.svg"> 上传</a>
+        </form>
+    </nav>
+    <!-- 上传文件 -->
+    <div class="container">
+        <div class="upload" id="upload" ondrop="dropHandler(event)">
+            <div class="progress" style="display:none;" id="progress">
+                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0"
+                    aria-valuemax="100" id="uploadProgress">0%</div>
+            </div>
+            <img src="/assets/svg/upload.svg" class="upload-image">
+            <form id="uploadForm">
+                <input type="file" name="file" id="file" style="display: none;"><br>
+            </form>
+            <br>
+            <!-- <p style="text-align: center;" id="uploadP">鼠标拖拽至此上传或</p> -->
+            <button class="btn btn-outline-primary" onclick="getFile()" style="margin: 30px auto;display: block;" id="btn">选择文件</button>
+        </div>
+    </div>
+    <script src="/assets/bootstrap/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/upload.js"></script>
+
+</body>
+
+</html>

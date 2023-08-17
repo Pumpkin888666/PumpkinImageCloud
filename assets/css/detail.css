@@ -1,0 +1,41 @@
+.main {
+    box-shadow: 2px 2px 12px 2px #ccc;
+    border-radius: 5px
+}
+
+.main-box {
+    height: 800px;
+    margin: 5px 5px;
+    padding: 5px;
+}
+
+.main-header {
+    width: 90%;
+    background-color: #16b777;
+    margin: 10px auto;
+}
+
+.main-body {
+    width: 95%;
+    height: 300px;
+    margin: 10px auto;
+}
+
+.main-footer {
+    background-color: red;
+    width: 100%;
+    height: auto;
+    margin-bottom: 500px;
+}
+
+.image{
+    width: 100%;
+    height: 300px;
+}
+
+.content {
+    border: 1px solid #ccc;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
